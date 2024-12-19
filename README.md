@@ -22,4 +22,19 @@ Open neovim -> `:Mason` -> press 5 -> search for 'black' and install it (for pyt
 
 
 
-for bluetooth `sudo pacman -S bluez bluez-utils`
+### bluetooth 
+Install `sudo pacman -S bluez bluez-utils`
+`sudo systemctl start bluetooth`
+`sudo systemctl enable bluetooth`
+Do `bluetoothctl` and then this secuence
+-  `power on`
+-  `agent on`
+-  `default-agent`
+-  Identify your device
+
+### Wifi
+- `nmcli d wifi`
+- identify your network
+- `nmcli d wifi conection <name_of_your_network> password <your_password>`
+
+
