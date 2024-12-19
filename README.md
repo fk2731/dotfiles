@@ -19,3 +19,7 @@ Open neovim -> `:Mason` -> press 5 -> search for 'black' and install it (for pyt
 
 
 `sudo pacman -S ttf-font-awesome` for waybar fonts
+
+
+
+for bluetooth `sudo pacman -S bluez bluez-utils`
