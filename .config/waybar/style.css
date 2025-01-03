@@ -1,0 +1,109 @@
+@import "mocha.css";
+
+* {
+  font-family: "Font Awesome";
+  font-size: 10px;
+  min-height: 0;
+  font-weight: bold;
+}
+
+window#waybar {
+  background: transparent;
+  color: @lavender;
+}
+
+#window {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.modules-center {
+  background-color: @surface0;
+  border-radius: 15px;
+}
+
+#workspaces button {
+  background-color: @surface1;
+  padding: 5px;
+  color: @lavender;
+  font-size: 13px;
+  border-radius: 15px;
+  transition: background-color .2s ease;
+  transition: min-width .3s ease-in-out;
+}
+
+#workspaces button.active {
+  min-width: 30px;
+  transition: background-color .2s ease;
+  transition: min-width .3s ease-in-out;
+  background-color: @lavender;
+  color: @surface0;
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
+
+#pulseaudio,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#wireplumber,
+#tray,
+#network,
+#mode,
+#bluetooth,
+#custom-notification,
+#scratchpad {
+  margin-top: 2px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: @base;
+  border-radius: 15px;
+}
+
+#clock {
+  color: @maroon;
+}
+
+#clock.date {
+  color: @mauve;
+}
+
+#pulseaudio {
+  color: @blue;
+}
+
+#network {
+ color: @yellow;
+}
+
+#battery {
+  color: @green;
+}
+
+#disk {
+  color: @sapphire;
+}
+
+#memory {
+  color: @sky;
+}
+
+#temperature {
+  color: @blue;
+}
+
+#bluetooth {
+  color: @mauve;
+}
+
+#custom-notification {
+  color: @peach;
+}

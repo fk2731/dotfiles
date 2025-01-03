@@ -1,0 +1,10 @@
+[Unit]
+Description=Temporizador para monitoreo de batería
+Requires=battery-monitor.service
+
+[Timer]
+OnBootSec=0s
+OnUnitActiveSec=30s
+
+[Install]
+WantedBy=timers.target

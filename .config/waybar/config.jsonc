@@ -1,0 +1,103 @@
+{
+  "position": "top",
+  "modules-left": ["temperature", "disk", "memory"],
+  "modules-center": ["hyprland/workspaces", "hyprland/window"],
+  "modules-right": [
+    "bluetooth",
+    "network",
+    "pulseaudio",
+    "battery",
+    "clock",
+    "custom/notification",
+  ],
+
+  "hyprland/window": { "rewrite": {
+      "(.*) - Brave": "Brave",
+      "(.*):~(.*)": "Kitty",
+      "(.*) - Brave Search": "Brave",
+      "vi": "NeoVim",
+    },
+    "separate-outputs": true,
+  },
+
+  "clock": {
+    "format": "<span size='10000'> {:%a %d %H:%M}</span>",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+  },
+
+  "temperature": {
+    "format": "<span size='10000'> {temperatureC}°C</span>",
+    "interval": 10,
+  },
+
+  "disk": {
+    "interval": 10,
+    "format": "<span size='10000'> {used}</span>",
+    "path": "/",
+  },
+
+  "memory": {
+    "interval": 0.1,
+    "format": "<span size='10000'> {used}GiB</span>",
+  },
+
+  "battery": {
+    "interval": 30,
+    "states": {
+      "warning": 30,
+      "critical": 10,
+    },
+    "format": "<span size='10000'>{icon} {capacity}%</span>",
+    "format-warning": "<span size='10000'>{icon} {capacity}%</span>",
+    "format-critical": "<span size='10000'> {capacity}%</span>",
+    "format-charging": "<span size='10000'> {capacity}%</span>",
+    "format-plugged": "<span size='10000'> {capacity}%</span>",
+    "format-alt": "{icon} {time}",
+    "format-icons": [" "],
+    "tooltip-format": "{time}",
+  },
+
+  "network": {
+    "format-wifi": "<span size='10000'>  {essid}</span>",
+    "format-ethernet": "<span size='10000'> Fixi</span>",
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "  Disconnected",
+  },
+
+  "pulseaudio": {
+    "format": "<span size='10000'>{icon}  {volume}%</span>",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", "", " "],
+    },
+  },
+
+  "bluetooth": {
+    "format": "<span size='10000'></span>",
+    "format-connected": "<span size='10000'> {device_alias}</span>",
+    "format-connected-battery": " {device_alias} - {device_battery_percentage}%",
+    "on-click": "bluetoothctl connect 2C:FD:B4:A4:43:08",
+  },
+
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup> </sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup> </sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup> </sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup> </sup></span>",
+      "dnd-inhibited-none": "",
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+  },
+}

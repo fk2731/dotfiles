@@ -1,0 +1,11 @@
+[Unit]
+Description=Ejecutar script para monitoreo de batería
+
+[Service]
+Type=oneshot
+ExecStart=/home/leo/.config/hypr/scripts/battery-monitors.sh
+Environment="DISPLAY=:0" "XAUTHORITY=/run/user/$(id -u)/.Xauthority"
+
+[Install]
+WantedBy=default.target
+

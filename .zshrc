@@ -27,9 +27,9 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # Use Hyprland on logIn
-if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
-    exec Hyprland
-fi
+# if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
+#     exec Hyprland
+# fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -40,3 +40,4 @@ alias lst='lsd --tree'
 alias la='lsd -a'
 
 alias vi='nvim'
+alias cat='bat'
