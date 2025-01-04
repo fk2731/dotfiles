@@ -19,7 +19,7 @@ return {
       mapping = cmp.mapping.preset.insert({
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
-        ["<C-Space>"] = function(fallback)
+        ["<D-Space>"] = function(fallback)
           local cmp = require("cmp")
           if cmp.visible() then
             cmp.close()
