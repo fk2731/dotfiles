@@ -5,5 +5,6 @@ BATTERY_LEVEL=$(cat /sys/class/power_supply/BAT1/capacity)
 BATTERY_STATUS=$(cat /sys/class/power_supply/BAT1/status)
 
 if [ "$BATTERY_STATUS" != "Charging" ] && [ "$BATTERY_LEVEL" -le "$LOW_BATTERY_THRESHOLD" ]; then
-  notify-send -u critical "Low Battery" "Battery at ${BATTERY_LEVEL}%. Please charge your device."
+  unset ON_CHARGING_NOTI
+  notify-send -u critical -i "$HOME/.dotfiles/.config/hypr/scripts/icons/alert.png" "Low Battery" "Battery at ${BATTERY_LEVEL}%. Please charge your device."
 fi

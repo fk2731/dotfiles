@@ -4,7 +4,7 @@ Requires=battery-monitor.service
 
 [Timer]
 OnBootSec=0s
-OnUnitActiveSec=30s
+OnUnitActiveSec=300s
 
 [Install]
 WantedBy=timers.target

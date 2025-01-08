@@ -1,6 +1,7 @@
 @define-color text-color #cdd6f4;
 @define-color base-color #1e1e2e;
 @define-color critical-color #ff5555;
+@define-color low-color #a6e3a1;
 @define-color close-button-color #f38ba8;
 @define-color hover-close-button-color #eba0ac;
 @define-color base-bg-color #313244;
@@ -70,6 +71,32 @@ slider {
   .notification-row
   .notification-background
   .notification.critical
+  .notification-content
+  .summary {
+  font-weight: bold;
+  color: @base-color;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification.low {
+  background-color: @low-color;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification.low
+  .notification-content
+  .body {
+  color: @base-color;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification.low
   .notification-content
   .summary {
   font-weight: bold;
@@ -223,6 +250,7 @@ slider {
   background-color: #2e2e3e;
 }
 
+
 .control-center
   .notification-row
   .notification-background
@@ -244,6 +272,32 @@ slider {
   .notification-row
   .notification-background
   .notification.critical
+  .notification-content
+  .summary {
+  color: @base-color;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification.low {
+  background-color: @low-color;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification.low
+  .notification-content
+  .body {
+  font-weight: bold;
+  color: @base-color;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification.low
   .notification-content
   .summary {
   color: @base-color;
