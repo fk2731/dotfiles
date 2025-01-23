@@ -12,7 +12,7 @@
 * {
   all: unset;
   font-size: 14px;
-  font-family: "JetBrains Mono";
+  font-family: "JetBrainsMono Nerd Font";
   transition: 300ms;
 }
 
@@ -172,6 +172,7 @@ slider {
   background-color: @base-bg-color;
   color: @text-color;
 }
+
 .floating-notifications.background
   .notification-row
   .notification-background
@@ -250,7 +251,6 @@ slider {
   background-color: #2e2e3e;
 }
 
-
 .control-center
   .notification-row
   .notification-background
@@ -277,11 +277,9 @@ slider {
   color: @base-color;
 }
 
-.control-center
-  .notification-row
-  .notification-background
-  .notification.low {
+.control-center .notification-row .notification-background .notification.low {
   background-color: @low-color;
+  color: @base-color;
 }
 
 .control-center
@@ -408,6 +406,7 @@ slider {
 @define-color mpris-album-art-overlay rgba(0, 0, 0, 0.55);
 @define-color mpris-button-hover rgba(0, 0, 0, 0.50);
 @define-color noti-bg-hover rgba(255, 255, 255, 0.2);
+
 .widget-mpris {
   /* The parent to all players */
 }
@@ -485,4 +484,5 @@ slider {
 
 .image {
   padding-right: 0.5rem;
+  border-radius: 15px;
 }

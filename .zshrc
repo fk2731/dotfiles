@@ -40,7 +40,6 @@ alias lst='lsd --tree'
 alias la='lsd -a'
 
 alias vi='nvim'
-alias v='nvim .'
 alias cat='bat'
 
 alias add='git add'

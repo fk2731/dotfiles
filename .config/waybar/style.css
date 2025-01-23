@@ -1,41 +1,31 @@
 @import "mocha.css";
 
 * {
-  font-family: "Font Awesome";
+  font-family: "JetBrainsMono Nerd Font";
   font-size: 10px;
   min-height: 0;
   font-weight: bold;
 }
 
 window#waybar {
-  background: transparent;
+  background-color: transparent;
   color: @lavender;
-}
-
-#window {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.modules-center {
-  background-color: @surface0;
-  border-radius: 15px;
 }
 
 #workspaces button {
-  background-color: @surface1;
-  padding: 5px;
+  background-color: @surface0;
+  /* padding: 5px; */
+  margin: 2.5px 3px;
   color: @lavender;
-  font-size: 13px;
   border-radius: 15px;
-  transition: background-color .2s ease;
-  transition: min-width .3s ease-in-out;
+  transition: background-color 0.2s ease;
+  transition: min-width 0.3s ease-in-out;
 }
 
 #workspaces button.active {
   min-width: 30px;
-  transition: background-color .2s ease;
-  transition: min-width .3s ease-in-out;
+  transition: background-color 0.2s ease;
+  transition: min-width 0.3s ease-in-out;
   background-color: @lavender;
   color: @surface0;
 }
@@ -57,53 +47,45 @@ window#waybar {
 #network,
 #mode,
 #bluetooth,
-#custom-notification,
 #scratchpad {
-  margin-top: 2px;
-  margin-left: 4px;
-  margin-right: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  background-color: @base;
+  margin: 2.5px 4px;
+  padding: 0px 5px;
+  color: @base;
   border-radius: 15px;
 }
 
 #clock {
-  color: @maroon;
+  background-color: @maroon;
 }
 
 #clock.date {
-  color: @mauve;
+  background-color: @mauve;
 }
 
 #pulseaudio {
-  color: @blue;
+  background-color: @blue;
 }
 
 #network {
- color: @yellow;
+  background-color: @yellow;
 }
 
 #battery {
-  color: @green;
+  background-color: @green;
 }
 
 #disk {
-  color: @sapphire;
+  background-color: @sapphire;
 }
 
 #memory {
-  color: @sky;
+  background-color: @sky;
 }
 
 #temperature {
-  color: @blue;
+  background-color: @blue;
 }
 
 #bluetooth {
-  color: @mauve;
-}
-
-#custom-notification {
-  color: @peach;
+  background-color: @mauve;
 }

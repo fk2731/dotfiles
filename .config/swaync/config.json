@@ -39,7 +39,7 @@
     },
     "volume":{
       "slider": true,
-      "label": "  "
+      "label": "󱑽 "
     },
     "backlight": {
       "slider": true,
