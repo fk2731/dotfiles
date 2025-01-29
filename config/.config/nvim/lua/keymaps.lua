@@ -73,7 +73,7 @@ vim.keymap.set("n", "<c-j>", "<c-w>-")
 
 -- Copy filepath to the clipboard
 vim.keymap.set("n", "<leader>fp", function()
-	local filePath = vim.fn.expand("%:~") -- Gets the file path relative to the home directory
-	vim.fn.setreg("+", filePath) -- Copy the file path to the clipboard register
-	print("File path copied to clipboard: " .. filePath) -- Optional: print message to confirm
+  local filePath = vim.fn.expand("%:~")               -- Gets the file path relative to the home directory
+  vim.fn.setreg("+", filePath)                        -- Copy the file path to the clipboard register
+  print("File path copied to clipboard: " .. filePath) -- Optional: print message to confirm
 end, { desc = "Copy file path to clipboard" })
