@@ -10,7 +10,7 @@ return {
       },
       sections = {
         lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
-        lualine_b = { "windows", "branch", "searchcount", "selectioncount" },
+        lualine_b = { "windows", "searchcount", "branch", "diff", "diagnostics", "selectioncount" },
         lualine_c = {},
         lualine_x = {},
         lualine_y = { "filetype", "fileformat", "filesize", "progress" },
@@ -24,7 +24,7 @@ return {
         lualine_c = {},
         lualine_x = {},
         lualine_y = {},
-        lualine_z = { "location" },
+        lualine_z = {},
       },
       tabline = {},
       extensions = {},

@@ -10,8 +10,8 @@ vim.keymap.set("n", "<Leader>q", "<Esc>:q<Return>", opts)
 vim.keymap.set("n", "J", ":m .+1<CR>==", { desc = "Move current line down" })
 vim.keymap.set("n", "K", ":m .-2<CR>==", { desc = "Move current line up" })
 
-vim.keymap.set("v", "J", ":m .+1<CR>gv=gv", { desc = "Move current line down" })
-vim.keymap.set("v", "K", ":m .-2<CR>gv=gv", { desc = "Move current line up" })
+vim.keymap.set("v", "J", ":move '>+1<CR>gv=gv", { desc = "Move current line down" })
+vim.keymap.set("v", "K", ":move '<-2<CR>gv=gv", { desc = "Move current line up" })
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "move down in buffer with cursor centered" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "move up in buffer with cursor centered" })

@@ -4,13 +4,9 @@
   "modules-center": ["hyprland/workspaces", "hyprland/window"],
   "modules-right": ["bluetooth", "network", "pulseaudio", "battery", "clock"],
 
+  "(.*)vi(.*)": "NeoVim",
   "hyprland/window": {
-    "rewrite": {
-      "(.*) - Brave": "Brave",
-      "(.*):~(.*)": "Kitty",
-      "(.*) - Brave Search": "Brave",
-      "(.*)vi(.*)": "NeoVim",
-    },
+    "rewrite": {},
     "separate-outputs": true,
   },
 

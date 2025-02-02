@@ -31,6 +31,7 @@ return {
 				telescope = true,
 				treesitter = true,
 				treesitter_context = true,
+				nvim_surround = true,
 			},
 		},
 		config = function()

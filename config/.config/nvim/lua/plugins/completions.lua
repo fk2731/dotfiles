@@ -58,10 +58,15 @@ return {
       "hrsh7th/cmp-cmdline",
       "hrsh7th/cmp-vsnip",
       "hrsh7th/vim-vsnip",
+      "L3MON4D3/LuaSnip",
     },
     config = function()
       local cmp = require("cmp")
       local lspkind = require("lspkind")
+      local luasnip = require("luasnip")
+
+      luasnip.filetype_extend("java", { "javadoc" })
+      require("luasnip.loaders.from_vscode").lazy_load()
 
       cmp.setup({
         --Snippet support
@@ -127,12 +132,8 @@ return {
           { name = "cmdline" },
         }),
       })
-    end,
-  },
-  {
-    "L3MON4D3/LuaSnip",
-    config = function()
-      require("luasnip.loaders.from_vscode").lazy_load()
+
+      vim.cmd("autocmd BufRead,BufNewFile *.java lua require('luasnip.loaders.from_vscode').lazy_load()")
     end,
   },
 }
