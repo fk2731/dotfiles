@@ -18,13 +18,6 @@ return {
     },
     keys = {
       {
-        "<leader>.",
-        function()
-          Snacks.scratch()
-        end,
-        desc = "Toggle Scratch Buffer",
-      },
-      {
         "<leader>n",
         function()
           Snacks.notifier.show_history()
