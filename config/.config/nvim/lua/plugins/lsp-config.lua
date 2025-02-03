@@ -159,16 +159,7 @@ return {
 						hoverProvider = { enable = true },
 					},
 					capabilities = require("cmp_nvim_lsp").default_capabilities(),
-					format = {
-						enabled = true,
-						settings = {
-							url = "file://"
-								.. vim.fn.expand(
-									"~/.local/share/nvim/mason/packages/google-java-format/google-java-format-1.25.2-all-deps.jar"
-								),
-							profile = "GoogleStyle",
-						},
-					},
+					
 				},
 			}
 
