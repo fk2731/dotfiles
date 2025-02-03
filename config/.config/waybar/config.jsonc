@@ -6,7 +6,11 @@
 
   "(.*)vi(.*)": "NeoVim",
   "hyprland/window": {
-    "rewrite": {},
+    "rewrite": {
+      "(.*) - Brave": "Brave",
+      "(.*) - Brave Search": "Brave",
+      "(.*)vi(.*)": "NeoVim",
+    },
     "separate-outputs": true,
   },
 
