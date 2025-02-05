@@ -45,3 +45,5 @@ alias add='git add'
 alias ada='git add -A'
 alias comm='git commit -m'
 alias push='git push'
+
+alias man='tldr'
