@@ -3,16 +3,7 @@ return {
     "williamboman/mason.nvim",
     lazy = false,
     config = function()
-      require("mason").setup({
-        ensure_installed = {
-          "markdown_oxide",
-          "bashls",
-          "css-lsp",
-          "lua-language-server",
-          "typescript-language-server",
-          "stylua",
-        },
-      })
+      require("mason").setup({})
     end,
   },
   {
@@ -20,6 +11,13 @@ return {
     lazy = false,
     opts = {
       auto_install = true,
+      ensure_installed = {
+        "marksman",
+        "bashls",
+        "cssls",
+        "lua_ls",
+        "ts_ls",
+      },
     },
   },
   {
@@ -63,8 +61,9 @@ return {
       lspconfig.bashls.setup({
         capabilities = capabilities,
       })
-      lspconfig.markdown_oxide.setup({
-        capabilities = capabilities,
+      lspconfig.marksman.setup({
+        align = true,
+        auto_format = true,
       })
       lspconfig.ts_ls.setup({
         capabilities = capabilities,
@@ -151,7 +150,7 @@ return {
           "-data",
           workspace_dir,
         },
-        root_dir = require("jdtls.setup").find_root({ ".git", "pom.xml", "build.gradle, build.xml" }),
+        root_dir = require("jdtls.setup").find_root({ ".git", "pom.xml", "build.gradle", "build.xml" }),
         settings = {
           java = {
             signatureHelp = { enabled = true },
@@ -162,7 +161,12 @@ return {
         },
       }
 
-      require("jdtls").start_or_attach(config)
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = "java",
+        callback = function()
+          require("jdtls").start_or_attach(config)
+        end,
+      })
     end,
   },
 }

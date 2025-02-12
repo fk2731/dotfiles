@@ -8,7 +8,7 @@ cd ~/.dotfiles
 sudo tee /etc/pacman.conf < pacman.conf > /dev/null
 
 # Install packages with pacman
-sudo pacman -S lsd waybar hyprland kitty ripgrep hyprcursor hypridle hyprlock hyprpaper tldr stow wl-clipboard bat ly npm unzip system-config-printer neovim wget bluez bluez-utils --noconfirm
+sudo pacman -S brightnessctl lsd waybar hyprland kitty ripgrep hyprcursor hypridle hyprlock hyprpaper tldr stow wl-clipboard bat ly npm unzip system-config-printer neovim wget bluez bluez-utils --noconfirm
 
 # Installation for obs-studio
 sudo pacman -S qt6-wayland xdg-desktop-portal xdg-desktop-portal-hyprland --noconfirm
