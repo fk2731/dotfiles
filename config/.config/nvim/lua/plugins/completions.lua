@@ -56,23 +56,23 @@ return {
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-cmdline",
-			"hrsh7th/cmp-vsnip",
-			"hrsh7th/vim-vsnip",
+			"saadparwaiz1/cmp_luasnip",
 			"L3MON4D3/LuaSnip",
+			"rafamadriz/friendly-snippets",
 		},
 		config = function()
 			local cmp = require("cmp")
 			local lspkind = require("lspkind")
 			local luasnip = require("luasnip")
 
-			luasnip.filetype_extend("java", { "javadoc" })
 			require("luasnip.loaders.from_vscode").lazy_load()
+			luasnip.filetype_extend("java", { "javadoc" })
 
 			cmp.setup({
 				--Snippet support
 				snippet = {
 					expand = function(args)
-						vim.fn["vsnip#anonymous"](args.body)
+						luasnip.lsp_expand(args.body)
 					end,
 				},
 				--How completion should be displayed
@@ -100,7 +100,7 @@ return {
 				-- Order matters, cmp will provide lsp suggestions above all else
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
-					{ name = "vsnip" },
+					{ name = "luasnip" },
 					{ name = "buffer" },
 					{ name = "path" },
 					{ name = "render-markdown" },
@@ -130,8 +130,6 @@ return {
 					{ name = "cmdline" },
 				}),
 			})
-
-			vim.cmd("autocmd BufRead,BufNewFile *.java lua require('luasnip.loaders.from_vscode').lazy_load()")
 		end,
 	},
 }
