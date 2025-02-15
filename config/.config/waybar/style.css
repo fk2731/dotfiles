@@ -16,6 +16,7 @@ window#waybar {
   background-color: @surface0;
   /* padding: 5px; */
   margin: 2.5px 3px;
+  min-width: 8px;
   color: @lavender;
   border-radius: 15px;
   transition: background-color 0.2s ease;

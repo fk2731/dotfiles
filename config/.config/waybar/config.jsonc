@@ -4,19 +4,39 @@
   "modules-center": ["hyprland/workspaces", "hyprland/window"],
   "modules-right": ["bluetooth", "network", "pulseaudio", "battery", "clock"],
 
-  "(.*)vi(.*)": "NeoVim",
   "hyprland/window": {
     "rewrite": {
-      "(.*) - Brave": "Brave",
-      "(.*) - Brave Search": "Brave",
-      "(.*)vi(.*)": "NeoVim",
+      "(.*)@(.*):(.*)": "<span size='10000'>Kitty 󰌽 </span>",
+      "(.*) - Brave": "<span size='10000'>Brave 󰖟 </span>",
+      "(.*) - Brave Search": "<span size='10000'>Brave 󰖟 </span>",
+      "(.*)vi(.*)": "<span size='10000'>NeoVim  </span>",
+      "(.*) — Github": "<span size='10000'>$1  </span>",
+      "(.*)Github": "<span size='10000'>Github  </span>",
     },
     "separate-outputs": true,
   },
 
   "clock": {
     "format": "<span size='10000'>󰥔 {:%a %d %H:%M}</span>",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<span>{calendar}</span>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>",
+      },
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+    },
   },
 
   "temperature": {
@@ -47,7 +67,19 @@
     "format-charging": "<span size='10000'> {capacity}%</span>",
     "format-plugged": "<span size='10000'> {capacity}%</span>",
     "format-alt": "{icon} {time}",
-    "format-icons": [" "],
+    "format-icons": [
+      "󰂎 ",
+      "󰁺 ",
+      "󰁻 ",
+      "󰁼 ",
+      "󰁽 ",
+      "󰁾 ",
+      "󰁿 ",
+      "󰂀 ",
+      "󰂁 ",
+      "󰂂 ",
+      "󰁹 ",
+    ],
     "tooltip-format": "{time}",
   },
 
