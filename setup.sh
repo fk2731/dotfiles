@@ -7,6 +7,9 @@ cd ~/.dotfiles
 # Update pacman configuration
 sudo tee /etc/pacman.conf < pacman.conf > /dev/null
 
+# Append Defaults pwfeedback onto /etc/sudoers
+echo "Defaults pwfeedback" | sudo tee -a /etc/sudoers > /dev/null
+
 # Update cursor configuration
 sudo tee /usr/share/icons/default/index.theme < ./login/index.theme > /dev/null
 

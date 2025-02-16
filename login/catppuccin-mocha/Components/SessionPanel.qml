@@ -26,7 +26,7 @@ Item {
       }
       background: Rectangle {
         id: sessionEntryBackground
-        color: config.pink
+        color: config.peach
         radius: 15
       }
       states: [
@@ -35,7 +35,7 @@ Item {
           when: sessionEntry.hovered
           PropertyChanges {
             target: sessionEntryBackground
-            color: config.surface2
+            color: config.rosewater
           }
         }
       ]
@@ -69,7 +69,7 @@ Item {
     }
     background: Rectangle {
       id: sessionButtonBackground
-      color: config.surface0
+      color: config.peach
       radius: 15
     }
     states: [
@@ -78,7 +78,7 @@ Item {
         when: sessionButton.down
         PropertyChanges {
           target: sessionButtonBackground
-          color: config.surface1
+          color: config.flamingo
         }
       },
       State {
@@ -86,7 +86,7 @@ Item {
         when: sessionButton.hovered
         PropertyChanges {
           target: sessionButtonBackground
-          color: config.surface2
+          color: config.flamingo
         }
       },
       State {
@@ -94,7 +94,7 @@ Item {
         when: sessionPopup.visible
         PropertyChanges {
           target: sessionButtonBackground
-          color: config.surface2
+          color: config.flamingo
         }
       }
     ]
