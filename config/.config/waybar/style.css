@@ -48,6 +48,7 @@ window#waybar {
 #network,
 #mode,
 #bluetooth,
+#custom-wlogout,
 #scratchpad {
   margin: 2.5px 4px;
   padding: 0px 5px;
@@ -75,18 +76,23 @@ window#waybar {
   background-color: @green;
 }
 
-#disk {
-  background-color: @sapphire;
+#bluetooth {
+  background-color: @mauve;
 }
 
 #memory {
+  background-color: @teal;
+}
+
+#disk {
   background-color: @sky;
 }
 
 #temperature {
-  background-color: @blue;
+  background-color: @sapphire;
 }
 
-#bluetooth {
-  background-color: @mauve;
+#custom-wlogout {
+  background-color: @blue;
+  min-width: 30px;
 }

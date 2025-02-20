@@ -1,8 +1,13 @@
 {
   "position": "top",
-  "modules-left": ["temperature", "disk", "memory"],
+  "modules-left": ["custom/wlogout", "temperature", "disk", "memory"],
   "modules-center": ["hyprland/workspaces", "hyprland/window"],
   "modules-right": ["bluetooth", "network", "pulseaudio", "battery", "clock"],
+
+  "custom/wlogout": {
+    "format": "<span size='10000'></span>",
+    "on-click": "hyprctl dispatch exec wlogout",
+  },
 
   "hyprland/window": {
     "rewrite": {
@@ -64,22 +69,10 @@
     "format": "<span size='10000'>{icon}{capacity}%</span>",
     "format-warning": "<span size='10000'>{icon}{capacity}%</span>",
     "format-critical": "<span size='10000'> {capacity}%</span>",
-    "format-charging": "<span size='10000'> {capacity}%</span>",
-    "format-plugged": "<span size='10000'> {capacity}%</span>",
+    "format-charging": "<span size='10000'> {capacity}%</span>",
+    "format-plugged": "<span size='10000'> {capacity}%</span>",
     "format-alt": "{icon} {time}",
-    "format-icons": [
-      "󰂎 ",
-      "󰁺 ",
-      "󰁻 ",
-      "󰁼 ",
-      "󰁽 ",
-      "󰁾 ",
-      "󰁿 ",
-      "󰂀 ",
-      "󰂁 ",
-      "󰂂 ",
-      "󰁹 ",
-    ],
+    "format-icons": [" ", " ", " ", " ", " "],
     "tooltip-format": "{time}",
   },
 
