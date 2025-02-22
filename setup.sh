@@ -203,4 +203,5 @@ sudo cp -f ./login/index.theme /usr/share/icons/default/index.theme
 
 sudo systemctl enable bluetooth.service
 
+sudo systemctl restart sddm
 sudo systemctl start sddm.service
