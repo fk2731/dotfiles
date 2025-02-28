@@ -1,28 +1,28 @@
 {
   "position": "top",
   "modules-left": ["custom/wlogout", "temperature", "disk", "memory"],
-  "modules-center": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": ["bluetooth", "network", "pulseaudio", "battery", "clock"],
 
   "custom/wlogout": {
-    "format": "<span size='10000'></span>",
+    "format": "<span size='11000'></span>",
     "on-click": "hyprctl dispatch exec wlogout",
   },
 
-  "hyprland/window": {
-    "rewrite": {
-      "(.*)@(.*):(.*)": "<span size='10000'>Kitty 󰌽 </span>",
-      "(.*) - Brave": "<span size='10000'>Brave 󰖟 </span>",
-      "(.*) - Brave Search": "<span size='10000'>Brave 󰖟 </span>",
-      "(.*)vi(.*)": "<span size='10000'>NeoVim  </span>",
-      "(.*) — Github": "<span size='10000'>$1  </span>",
-      "(.*)Github": "<span size='10000'>Github  </span>",
-    },
-    "separate-outputs": true,
-  },
+  // "hyprland/window": {
+  //   "rewrite": {
+  //     "(.*)@(.*):(.*)": "<span size='11000'>Kitty 󰌽 </span>",
+  //     "(.*) - Brave": "<span size='11000'>Brave 󰖟 </span>",
+  //     "(.*) - Brave Search": "<span size='11000'>Brave 󰖟 </span>",
+  //     "(.*)vi(.*)": "<span size='11000'>NeoVim  </span>",
+  //     "(.*) — Github": "<span size='11000'>$1  </span>",
+  //     "(.*)Github": "<span size='11000'>Github  </span>",
+  //   },
+  //   "separate-outputs": true,
+  // },
 
   "clock": {
-    "format": "<span size='10000'>󰥔 {:%a %d %H:%M}</span>",
+    "format": "<span size='11000'>󰥔 {:%a %d %H:%M}</span>",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
       "mode": "month",
@@ -45,19 +45,19 @@
   },
 
   "temperature": {
-    "format": "<span size='10000'> {temperatureC}°C</span>",
+    "format": "<span size='11000'> {temperatureC}°C</span>",
     "interval": 10,
   },
 
   "disk": {
     "interval": 10,
-    "format": "<span size='10000'> {used}</span>",
+    "format": "<span size='11000'> {used}</span>",
     "path": "/",
   },
 
   "memory": {
     "interval": 0.1,
-    "format": "<span size='10000'> {used}GiB</span>",
+    "format": "<span size='11000'> {used}GiB</span>",
   },
 
   "battery": {
@@ -66,26 +66,26 @@
       "warning": 30,
       "critical": 10,
     },
-    "format": "<span size='10000'>{icon}{capacity}%</span>",
-    "format-warning": "<span size='10000'>{icon}{capacity}%</span>",
-    "format-critical": "<span size='10000'> {capacity}%</span>",
-    "format-charging": "<span size='10000'> {capacity}%</span>",
-    "format-plugged": "<span size='10000'> {capacity}%</span>",
+    "format": "<span size='11000'>{icon}{capacity}%</span>",
+    "format-warning": "<span size='11000'>{icon}{capacity}%</span>",
+    "format-critical": "<span size='11000'> {capacity}%</span>",
+    "format-charging": "<span size='11000'> {capacity}%</span>",
+    "format-plugged": "<span size='11000'> {capacity}%</span>",
     "format-alt": "{icon} {time}",
     "format-icons": [" ", " ", " ", " ", " "],
     "tooltip-format": "{time}",
   },
 
   "network": {
-    "format-wifi": "<span size='10000'>  {essid}</span>",
-    "format-ethernet": "<span size='10000'> Fixi</span>",
+    "format-wifi": "<span size='11000'>  {essid}</span>",
+    "format-ethernet": "<span size='11000'> Fixi</span>",
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "  Disconnected",
   },
 
   "pulseaudio": {
-    "format": "<span size='10000'>{icon}{volume}%</span>",
+    "format": "<span size='11000'>{icon}{volume}%</span>",
     "format-muted": " ",
     "format-icons": {
       "default": [" ", " "],
@@ -93,8 +93,8 @@
   },
 
   "bluetooth": {
-    "format": "<span size='10000'></span>",
-    "format-connected": "<span size='10000'>󰓃 {device_alias}</span>",
+    "format": "<span size='11000'></span>",
+    "format-connected": "<span size='11000'>󰓃 {device_alias}</span>",
     "format-connected-battery": " {device_alias} - {device_battery_percentage}%",
     "on-click": "bluetoothctl connect 2C:FD:B4:A4:43:08",
   },
